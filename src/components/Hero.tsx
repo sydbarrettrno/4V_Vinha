@@ -37,15 +37,15 @@ const Hero = () => {
           >
             Nossos Serviços
           </Button>
-          <Button
+         <Button
             onClick={() => window.open("https://wa.me/5547999606002", "_blank")}
             size="lg"
             variant="outline"
             className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8"
-          >
-            <MessageCircle className="mr-2" />
-            Falar no WhatsApp
-          </Button>
+            >
+          <MessageCircle className="mr-2" />
+          Falar no WhatsApp
+        </Button>
         </div>
       </div>
     </section>
