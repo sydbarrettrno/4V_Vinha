@@ -12,7 +12,7 @@ const CTA = () => {
           Fale conosco agora e receba orientação personalizada
         </p>
         <Button
-          onClick={() => window.open("https://wa.me/5511999999999", "_blank")}
+          onClick={() => window.open("https://wa.me/5547999606002", "_blank")}
           size="lg"
           variant="secondary"
           className="text-lg px-8"
