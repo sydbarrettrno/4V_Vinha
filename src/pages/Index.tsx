@@ -955,84 +955,81 @@ Mensagem: ${formData.mensagem}
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* COLUNA 1 – Logo + texto */}
-            <div>
-              <img
-                import logo4v from '@/assets/logo-4v.png';
-                alt="4V Vinha Engenharia Civil"
-                className="h-10 w-auto mb-4"
-              />
-              <p className="text-gray-400 mb-2">Engenharia Civil</p>
-              <p className="text-gray-400 text-sm">
-                Projetos estruturais, laudos técnicos e regularização
-                imobiliária.
-              </p>
-            </div>
+<footer className="bg-gray-900 text-white py-12 px-4">
+  <div className="container mx-auto">
+    <div className="grid md:grid-cols-3 gap-8 mb-8">
+      {/* COLUNA 1 – Logo + texto */}
+      <div>
+        <img
+          src={logo4v}
+          alt="4V Vinha Engenharia Civil"
+          className="h-10 w-auto mb-4"
+        />
+        <p className="text-gray-400 mb-2">Engenharia Civil</p>
+        <p className="text-gray-400 text-sm">
+          Projetos estruturais, laudos técnicos e regularização imobiliária.
+        </p>
+      </div>
 
-            {/* COLUNA 2 – Serviços */}
-            <div>
-              <h4 className="font-semibold mb-4">Serviços</h4>
-              <div className="space-y-2 text-sm">
-                <button
-                  onClick={() => scrollToSection("servicos")}
-                  className="block text-gray-400 hover:text-white transition"
-                >
-                  Projetos Estruturais
-                </button>
-                <button
-                  onClick={() => scrollToSection("servicos")}
-                  className="block text-gray-400 hover:text-white transition"
-                >
-                  Laudos e Perícias
-                </button>
-                <button
-                  onClick={() => scrollToSection("servicos")}
-                  className="block text-gray-400 hover:text-white transition"
-                >
-                  Acompanhamento de Obras
-                </button>
-                <button
-                  onClick={() => scrollToSection("servicos")}
-                  className="block text-gray-400 hover:text-white transition"
-                >
-                  Regularização Imobiliária
-                </button>
-              </div>
-            </div>
+      {/* COLUNA 2 – Serviços */}
+      <div>
+        <h4 className="font-semibold mb-4">Serviços</h4>
+        <div className="space-y-2 text-sm">
+          <button
+            onClick={() => scrollToSection("servicos")}
+            className="block text-gray-400 hover:text-white transition"
+          >
+            Projetos Estruturais
+          </button>
+          <button
+            onClick={() => scrollToSection("servicos")}
+            className="block text-gray-400 hover:text-white transition"
+          >
+            Laudos e Perícias
+          </button>
+          <button
+            onClick={() => scrollToSection("servicos")}
+            className="block text-gray-400 hover:text-white transition"
+          >
+            Acompanhamento de Obras
+          </button>
+          <button
+            onClick={() => scrollToSection("servicos")}
+            className="block text-gray-400 hover:text-white transition"
+          >
+            Regularização Imobiliária
+          </button>
+        </div>
+      </div>
 
-            {/* COLUNA 3 – Contato */}
-            <div>
-              <h4 className="font-semibold mb-4">Contato</h4>
-              <div className="space-y-2 text-sm text-gray-400">
-                <p>WhatsApp: (47) 99960-6002</p>
-                <p>Email: dpvitapoa@gmail.com</p>
-                <p>Segunda a Sexta: 8h às 18h</p>
-                <div className="flex gap-4 mt-4">
-                  <a href="#" className="hover:text-white transition">
-                    Instagram
-                  </a>
-                  <a href="#" className="hover:text-white transition">
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>
-              © 2025 4V Vinha - Engenharia Civil | Todos os direitos reservados
-            </p>
-            <p className="mt-2">
-              Engenharia Civil aplicada com responsabilidade técnica e
-              compromisso profissional
-            </p>
+      {/* COLUNA 3 – Contato */}
+      <div>
+        <h4 className="font-semibold mb-4">Contato</h4>
+        <div className="space-y-2 text-sm text-gray-400">
+          <p>WhatsApp: (47) 99960-6002</p>
+          <p>Email: dpvitapoa@gmail.com</p>
+          <p>Segunda a Sexta: 8h às 18h</p>
+          <div className="flex gap-4 mt-4">
+            <a href="#" className="hover:text-white transition">
+              Instagram
+            </a>
+            <a href="#" className="hover:text-white transition">
+              LinkedIn
+            </a>
           </div>
         </div>
-      </footer>
+      </div>
+    </div>
+
+    <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+      <p>© 2025 4V Vinha - Engenharia Civil | Todos os direitos reservados</p>
+      <p className="mt-2">
+        Engenharia Civil aplicada com responsabilidade técnica e compromisso
+        profissional
+      </p>
+    </div>
+  </div>
+</footer>
 
       {/* BOTÃO FLOTANTE WHATSAPP */}
       <a
