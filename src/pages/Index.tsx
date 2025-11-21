@@ -6,8 +6,9 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Shield, Settings, Handshake, FileText, Map, MapPin, Scale, Home, FileCheck, Building2, MessageCircle, Ruler, HardHat, ClipboardCheck } from 'lucide-react';
+import { Shield, Settings, Handshake, FileText, Map, MapPin, Scale, Home, Building2, MessageCircle, Ruler, HardHat, ClipboardCheck } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
+import logoVinha from '@/assets/logo-4v-vinha.png';
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -31,13 +32,19 @@ const Index = () => {
     }
   };
 
-  const whatsappLink = "https://wa.me/5548999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20engenheira%20sobre%20meu%20projeto.";
+  const whatsappLink = "https://wa.me/5547999606002?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20engenheira%20sobre%20meu%20projeto.";
 
   return (
     <div className="min-h-screen">
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-600">4V VINHA</div>
+          <a href="#inicio" className="flex items-center gap-3">
+            <img
+              src={logoVinha}
+              alt="4V Vinha Engenharia"
+              className="h-10 w-auto"
+            />
+          </a>
           <div className="hidden md:flex gap-6">
             <button onClick={() => scrollToSection('inicio')} className="hover:text-blue-600 transition">Início</button>
             <button onClick={() => scrollToSection('servicos')} className="hover:text-blue-600 transition">Serviços</button>
