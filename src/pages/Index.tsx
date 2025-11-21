@@ -481,12 +481,18 @@ const Index = () => {
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">4V VINHA</h3>
-              <p className="text-gray-400 mb-2">Engenharia Civil</p>
-              <p className="text-gray-400 text-sm">Projetos estruturais, laudos técnicos e regularização imobiliária com responsabilidade técnica</p>
-            </div>
-            <div>
+<div>
+  <img
+    src={logo}
+    alt="4V Vinha Engenharia Civil"
+    className="h-10 w-auto mb-4"
+  />
+  <p className="text-gray-400 mb-2">Engenharia Civil</p>
+  <p className="text-gray-400 text-sm">
+    Projetos estruturais, laudos técnicos e regularização imobiliária.
+  </p>
+</div>
+
               <h4 className="font-semibold mb-4">Serviços</h4>
               <div className="space-y-2 text-sm">
                 <button onClick={() => scrollToSection('servicos')} className="block text-gray-400 hover:text-white transition">Projetos Estruturais</button>
