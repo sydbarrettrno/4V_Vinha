@@ -9,7 +9,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Shield, Settings, Handshake, FileText, Map, MapPin, Scale, Home, Building2, MessageCircle, Ruler, HardHat, ClipboardCheck } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
 import logoVinha from '@/assets/logo-4v-vinha.png';
-
 const Index = () => {
   const [formData, setFormData] = useState({
     nome: '',
@@ -18,32 +17,25 @@ const Index = () => {
     servico: '',
     mensagem: ''
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Formulário enviado:', formData);
     alert('Mensagem enviada! Retornaremos em até 24h.');
   };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
   const whatsappLink = "https://wa.me/5547999606002?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20engenheira%20sobre%20meu%20projeto.";
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <a href="#inicio" className="flex items-center gap-3">
-            <img
-              src={logoVinha}
-              alt="4V Vinha Engenharia"
-              className="h-10 w-auto"
-            />
+            <img src={logoVinha} alt="4V Vinha Engenharia" className="h-10 w-auto" />
           </a>
           <div className="hidden md:flex gap-6">
             <button onClick={() => scrollToSection('inicio')} className="hover:text-blue-600 transition">Início</button>
@@ -57,16 +49,12 @@ const Index = () => {
         </nav>
       </header>
 
-      <section
-        id="inicio"
-        className="relative pt-24 pb-16 px-4 min-h-screen flex items-center justify-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)), url(${heroBackground})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
+      <section id="inicio" className="relative pt-24 pb-16 px-4 min-h-screen flex items-center justify-center" style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)), url(${heroBackground})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundAttachment: "fixed"
+    }}>
         <div className="container mx-auto text-center max-w-4xl text-white">
           <div className="mb-4 inline-block px-4 py-2 bg-white/10 text-blue-100 border border-white/20 rounded-full text-sm font-semibold">
             Engenharia Civil | CREA Regularizado
@@ -335,36 +323,31 @@ const Index = () => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Label htmlFor="nome">Nome Completo *</Label>
-                    <Input 
-                      id="nome" 
-                      required 
-                      value={formData.nome}
-                      onChange={(e) => setFormData({...formData, nome: e.target.value})}
-                    />
+                    <Input id="nome" required value={formData.nome} onChange={e => setFormData({
+                    ...formData,
+                    nome: e.target.value
+                  })} />
                   </div>
                   <div>
                     <Label htmlFor="telefone">Telefone (WhatsApp) *</Label>
-                    <Input 
-                      id="telefone" 
-                      type="tel" 
-                      required 
-                      value={formData.telefone}
-                      onChange={(e) => setFormData({...formData, telefone: e.target.value})}
-                    />
+                    <Input id="telefone" type="tel" required value={formData.telefone} onChange={e => setFormData({
+                    ...formData,
+                    telefone: e.target.value
+                  })} />
                   </div>
                   <div>
                     <Label htmlFor="email">E-mail *</Label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      required 
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    />
+                    <Input id="email" type="email" required value={formData.email} onChange={e => setFormData({
+                    ...formData,
+                    email: e.target.value
+                  })} />
                   </div>
                   <div>
                     <Label htmlFor="servico">Tipo de Projeto/Serviço *</Label>
-                    <Select onValueChange={(value) => setFormData({...formData, servico: value})}>
+                    <Select onValueChange={value => setFormData({
+                    ...formData,
+                    servico: value
+                  })}>
                       <SelectTrigger>
                         <SelectValue placeholder="Selecione o tipo de serviço" />
                       </SelectTrigger>
@@ -384,14 +367,10 @@ const Index = () => {
                   </div>
                   <div>
                     <Label htmlFor="mensagem">Descreva seu projeto ou necessidade *</Label>
-                    <Textarea 
-                      id="mensagem" 
-                      required 
-                      rows={4}
-                      placeholder="Ex: Preciso de projeto estrutural para casa de 120m²..."
-                      value={formData.mensagem}
-                      onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
-                    />
+                    <Textarea id="mensagem" required rows={4} placeholder="Ex: Preciso de projeto estrutural para casa de 120m²..." value={formData.mensagem} onChange={e => setFormData({
+                    ...formData,
+                    mensagem: e.target.value
+                  })} />
                   </div>
                   <Button type="submit" className="w-full">Enviar Solicitação</Button>
                 </form>
@@ -530,26 +509,18 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>© 2024 4V Vinha - Engenharia Civil | CREA-SC | Todos os direitos reservados</p>
+            <p>© 2025 4V Vinha - Engenharia Civil | CREA-SC | Todos os direitos reservados</p>
             <p className="mt-2">Engenharia Civil aplicada com responsabilidade técnica e compromisso profissional</p>
           </div>
         </div>
       </footer>
 
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 z-50 group"
-        aria-label="Falar com a Engenheira no WhatsApp"
-      >
+      <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 z-50 group" aria-label="Falar com a Engenheira no WhatsApp">
         <MessageCircle className="w-6 h-6" />
         <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
           Falar com a Engenheira
         </span>
       </a>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
