@@ -408,7 +408,7 @@ const Index = () => {
                     <MessageCircle className="w-5 h-5 text-blue-600 mt-1" />
                     <div>
                       <p className="font-semibold">WhatsApp</p>
-                      <p className="text-gray-600">(48) 99999-9999</p>
+                      <p className="text-gray-600">(47) 99960-6002</p>
                       <p className="text-sm text-gray-500">Atendimento ágil pela engenheira</p>
                     </div>
                   </div>
