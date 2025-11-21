@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Shield, Settings, Handshake, FileText, Map, MapPin, Scale, Home, FileCheck, Building2, MessageCircle, Ruler, HardHat, ClipboardCheck } from 'lucide-react';
+import heroBackground from '@/assets/hero-background.jpg';
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -49,16 +50,25 @@ const Index = () => {
         </nav>
       </header>
 
-      <section id="inicio" className="pt-24 pb-16 px-4 bg-gradient-to-br from-blue-50 to-white">
-        <div className="container mx-auto text-center max-w-4xl">
-          <div className="mb-4 inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+      <section
+        id="inicio"
+        className="relative pt-24 pb-16 px-4 min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)), url(${heroBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="container mx-auto text-center max-w-4xl text-white">
+          <div className="mb-4 inline-block px-4 py-2 bg-white/10 text-blue-100 border border-white/20 rounded-full text-sm font-semibold">
             Engenharia Civil | CREA Regularizado
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
             Projetos de Engenharia Civil com Responsabilidade Técnica
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Soluções completas em projetos estruturais, arquitetônicos, regularização e documentação técnica. Engenharia civil aplicada do planejamento à execução.
+          <p className="text-xl text-blue-100 mb-8">
+            Soluções completas em projetos estruturais, arquitetônicos e de regularização, com responsabilidade técnica e foco em segurança, economia e conformidade. Engenharia civil aplicada do planejamento à execução.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button size="lg" onClick={() => scrollToSection('servicos')}>
