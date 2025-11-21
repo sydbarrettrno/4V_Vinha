@@ -15,18 +15,23 @@ const Contact = () => {
     service: "",
     message: ""
   });
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      service: "",
-      message: ""
-    });
-  };
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const message =
+    `Novo contato pelo site 4V Vinha:\n` +
+    `Nome: ${formData.name}\n` +
+    `Telefone: ${formData.phone}\n` +
+    `E-mail: ${formData.email}\n` +
+    `Serviço de interesse: ${formData.service}\n` +
+    `Mensagem: ${formData.message}`;
+
+  const url = `https://wa.me/5547999606002?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+  toast.success("Redirecionando para o WhatsApp...");
+  setFormData({ name: "", phone: "", email: "", service: "", message: "" });
+};
   const handleChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
