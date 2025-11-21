@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <img alt="4V Vinha LTDA" className="h-16 w-auto" src="/lovable-uploads/12043835-33ef-4e90-a308-be4822907458.png" />
+            <img alt="4V Vinha LTDA" className="h-12 w-auto" src="/logo-4v-vinha-main.png" />
           </div>
 
           {/* Desktop Navigation */}
