@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-4v-vinha.png";
+import logo from "@/assets/logo-4v-vinha-main.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <img alt="4V Vinha" className="h-12 w-auto" src="/lovable-uploads/e268decd-c52d-4c2f-9dab-090a71d11241.png" />
+            <img alt="4V Vinha LTDA" className="h-16 w-auto" src={logo} />
           </div>
 
           {/* Desktop Navigation */}
