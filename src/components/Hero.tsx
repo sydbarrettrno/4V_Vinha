@@ -38,7 +38,7 @@ const Hero = () => {
             Nossos Serviços
           </Button>
           <Button
-            onClick={() => window.open("https://wa.me/5511999999999", "_blank")}
+            onClick={() => window.open("https://wa.me/5547999606002", "_blank")}
             size="lg"
             variant="outline"
             className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8"
