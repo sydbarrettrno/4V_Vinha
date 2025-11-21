@@ -509,7 +509,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>© 2025 4V Vinha - Engenharia Civil | CREA-SC | Todos os direitos reservados</p>
+            <p>© 2025 4V Vinha - Engenharia Civil | Todos os direitos reservados</p>
             <p className="mt-2">Engenharia Civil aplicada com responsabilidade técnica e compromisso profissional</p>
           </div>
         </div>
