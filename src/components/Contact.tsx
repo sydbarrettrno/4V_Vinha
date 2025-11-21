@@ -7,29 +7,33 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     service: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    setFormData({ name: "", phone: "", email: "", service: "", message: "" });
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      service: "",
+      message: ""
+    });
   };
-
   const handleChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
-
-  return (
-    <section id="contato" className="py-20 bg-background">
+  return <section id="contato" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
           Entre em Contato
@@ -44,36 +48,19 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Label htmlFor="name">Nome Completo</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => handleChange("name", e.target.value)}
-                    required
-                  />
+                  <Input id="name" value={formData.name} onChange={e => handleChange("name", e.target.value)} required />
                 </div>
                 <div>
                   <Label htmlFor="phone">Telefone</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => handleChange("phone", e.target.value)}
-                    required
-                  />
+                  <Input id="phone" type="tel" value={formData.phone} onChange={e => handleChange("phone", e.target.value)} required />
                 </div>
                 <div>
                   <Label htmlFor="email">E-mail</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                    required
-                  />
+                  <Input id="email" type="email" value={formData.email} onChange={e => handleChange("email", e.target.value)} required />
                 </div>
                 <div>
                   <Label htmlFor="service">Serviço de Interesse</Label>
-                  <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
+                  <Select value={formData.service} onValueChange={value => handleChange("service", value)}>
                     <SelectTrigger>
                       <SelectValue placeholder="Selecione um serviço" />
                     </SelectTrigger>
@@ -91,13 +78,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <Label htmlFor="message">Mensagem</Label>
-                  <Textarea
-                    id="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => handleChange("message", e.target.value)}
-                    required
-                  />
+                  <Textarea id="message" rows={4} value={formData.message} onChange={e => handleChange("message", e.target.value)} required />
                 </div>
                 <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
                   Enviar Mensagem
@@ -116,7 +97,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2 text-foreground">Telefone</h3>
-                    <p className="text-muted-foreground">(11) 99999-9999</p>
+                    <p className="text-muted-foreground">(47) 99960-6002</p>
                   </div>
                 </div>
               </CardContent>
@@ -130,7 +111,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2 text-foreground">E-mail</h3>
-                    <p className="text-muted-foreground">contato@4vvinha.com.br</p>
+                    <p className="text-muted-foreground">dpvitapoa@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -144,7 +125,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2 text-foreground">Localização</h3>
-                    <p className="text-muted-foreground">São Paulo - SP</p>
+                    <p className="text-muted-foreground">Itapoá - SC  </p>
                   </div>
                 </div>
               </CardContent>
@@ -152,8 +133,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
