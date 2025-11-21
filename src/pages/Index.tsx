@@ -498,8 +498,8 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <div className="space-y-2 text-sm text-gray-400">
-                <p>WhatsApp: (48) 99999-9999</p>
-                <p>Email: engenharia@4vvinha.com.br</p>
+                <p>WhatsApp: (47) 99960-6002</p>
+                <p>Email: dpvitapoa@gmail.com</p>
                 <p>Segunda a Sexta: 8h às 18h</p>
                 <div className="flex gap-4 mt-4">
                   <a href="#" className="hover:text-white transition">Instagram</a>
