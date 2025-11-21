@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img src={logo} alt="4V Vinha LTDA" className="h-16 w-auto mb-4" />
+            <img src="/logo-4v-vinha-main.png" alt="4V Vinha LTDA" className="h-16 w-auto mb-4" />
             <p className="text-secondary-foreground/80">
               Soluções completas em topografia e regularização de imóveis
             </p>
