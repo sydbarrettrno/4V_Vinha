@@ -58,14 +58,14 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-secondary-foreground/80">
-              <li>(11) 99999-9999</li>
-              <li>contato@4vvinha.com.br</li>
-              <li>São Paulo - SP</li>
+              <li>(47) 99960-6002</li>
+              <li>dpvitapoa@gmail.com</li>
+              <li>Itapoá - SC</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-secondary-foreground/20 pt-8 text-center text-secondary-foreground/80">
-          <p>© 2025 4V Vinha - Todos os direitos reservados</p>
+          <p>© 2025 4V Vinha LTDA - Todos os direitos reservados</p>
         </div>
       </div>
     </footer>
