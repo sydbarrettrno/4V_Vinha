@@ -24,14 +24,16 @@ const Index = () => {
   };
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
-  const whatsappLink = "https://wa.me/5547999606002?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20engenheira%20sobre%20meu%20projeto.";
+  const whatsappLink = "https://wa.me/5548999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20engenheira%20sobre%20meu%20projeto.";
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="text-2xl font-bold text-blue-600">4V VINHA</div>
@@ -47,7 +49,6 @@ const Index = () => {
         </nav>
       </header>
 
-      {/* Hero Section */}
       <section id="inicio" className="pt-24 pb-16 px-4 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto text-center max-w-4xl">
           <div className="mb-4 inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
@@ -74,7 +75,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Diferenciais */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Por Que Escolher a 4V Vinha?</h2>
@@ -110,7 +110,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Serviços */}
       <section id="servicos" className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center mb-4">Serviços de Engenharia Civil</h2>
@@ -119,7 +118,6 @@ const Index = () => {
           </p>
           
           <Accordion type="single" collapsible className="space-y-4">
-            {/* Serviço 1 - Projetos Estruturais */}
             <AccordionItem value="item-1" className="bg-white rounded-lg px-6 border-l-4 border-blue-600">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -137,7 +135,6 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {/* Serviço 2 - Laudos e Perícias */}
             <AccordionItem value="item-2" className="bg-white rounded-lg px-6">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -155,7 +152,6 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {/* Serviço 3 - Acompanhamento de Obra */}
             <AccordionItem value="item-3" className="bg-white rounded-lg px-6">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -173,7 +169,6 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {/* Serviço 4 - Levantamento Topográfico */}
             <AccordionItem value="item-4" className="bg-white rounded-lg px-6">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -185,13 +180,12 @@ const Index = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 space-y-4 pt-4">
-                <p><strong>O que é:</strong> Levantamento topográfico é a medição técnica que determina com precisão os limites, área, relevo e características físicas de um terreno. O planialtimétrico combina dados de planimetria (dimensões horizontais) e altimetria (variações de nível e relevo), fundamental para qualquer projeto de engenharia.</p>
+                <p><strong>O que é:</strong> Levantamento topográfico é a medição técnica que determina com precisão os limites, área, relevo e características físicas de um terreno. O planialtimétrico combina dados de planimetria e altimetria, fundamental para qualquer projeto de engenharia.</p>
                 <p><strong>Como funciona:</strong> Utilizamos equipamentos de alta precisão como estação total e GNSS para coletar dados em campo, processamos as informações em software especializado e entregamos plantas topográficas, memoriais descritivos e arquivos digitais compatíveis com projetos de engenharia civil e arquitetura.</p>
                 <p><strong>Por que contratar:</strong> Base técnica essencial para projetos estruturais e arquitetônicos, dados precisos evitam retrabalho e problemas na execução, necessário para aprovações em prefeituras e cartórios, e garante segurança jurídica em transações imobiliárias.</p>
               </AccordionContent>
             </AccordionItem>
 
-            {/* Serviço 5 - Desmembramento */}
             <AccordionItem value="item-5" className="bg-white rounded-lg px-6">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -203,13 +197,12 @@ const Index = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 space-y-4 pt-4">
-                <p><strong>O que é:</strong> Desmembramento é o processo técnico-administrativo de divisão de um terreno em lotes independentes, cada um com matrícula própria. Requer projeto técnico elaborado por engenheiro civil, conforme Lei de Parcelamento do Solo (6.766/79) e legislação municipal específica.</p>
-                <p><strong>Como funciona:</strong> Realizamos levantamento topográfico cadastral, elaboramos projeto de desmembramento atendendo parâmetros urbanísticos municipais, providenciamos aprovação na prefeitura com nossa responsabilidade técnica (ART), e acompanhamos registro no cartório de imóveis com emissão das novas matrículas.</p>
-                <p><strong>Por que contratar:</strong> Engenheira civil garante conformidade técnica com normas urbanísticas, agiliza aprovação em órgãos competentes, evita problemas jurídicos futuros, valoriza o patrimônio através de regularização adequada e possibilita transações independentes de cada lote gerado.</p>
+                <p><strong>O que é:</strong> Desmembramento é o processo técnico-administrativo de divisão de um terreno em lotes independentes. Requer projeto técnico elaborado por engenheiro civil, conforme Lei de Parcelamento do Solo e legislação municipal específica.</p>
+                <p><strong>Como funciona:</strong> Realizamos levantamento topográfico cadastral, elaboramos projeto de desmembramento atendendo parâmetros urbanísticos municipais, providenciamos aprovação na prefeitura com nossa responsabilidade técnica (ART), e acompanhamos registro no cartório de imóveis.</p>
+                <p><strong>Por que contratar:</strong> Engenheira civil garante conformidade técnica com normas urbanísticas, agiliza aprovação em órgãos competentes, evita problemas jurídicos futuros e valoriza o patrimônio através de regularização adequada.</p>
               </AccordionContent>
             </AccordionItem>
 
-            {/* Serviço 6 - Retificação de Área */}
             <AccordionItem value="item-6" className="bg-white rounded-lg px-6">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -221,13 +214,12 @@ const Index = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 space-y-4 pt-4">
-                <p><strong>O que é:</strong> Retificação de área é o procedimento técnico-jurídico que corrige divergências entre a metragem registrada na matrícula do imóvel e a área real medida em campo por engenheiro civil. Exige levantamento topográfico preciso e memorial descritivo técnico com ART.</p>
-                <p><strong>Como funciona:</strong> Executamos levantamento topográfico georeferenciado com equipamentos certificados, comparamos medições com dados da matrícula atual, elaboramos memorial descritivo técnico detalhado conforme NBR 13.133 e NBR 14.166, e conduzimos processo administrativo ou judicial de retificação junto ao cartório de registro de imóveis.</p>
-                <p><strong>Por que contratar:</strong> Responsabilidade técnica de engenheira civil confere validade ao procedimento, regulariza situação do imóvel antes de transações, evita questionamentos jurídicos sobre limites e confrontações, e garante que tributos correspondam à área real do terreno.</p>
+                <p><strong>O que é:</strong> Retificação de área é o procedimento técnico-jurídico que corrige divergências entre a metragem registrada na matrícula do imóvel e a área real medida em campo por engenheiro civil.</p>
+                <p><strong>Como funciona:</strong> Executamos levantamento topográfico georeferenciado com equipamentos certificados, elaboramos memorial descritivo técnico detalhado conforme NBR 13.133 e NBR 14.166, e conduzimos processo de retificação junto ao cartório de registro de imóveis.</p>
+                <p><strong>Por que contratar:</strong> Responsabilidade técnica de engenheira civil confere validade ao procedimento, regulariza situação do imóvel antes de transações e evita questionamentos jurídicos sobre limites.</p>
               </AccordionContent>
             </AccordionItem>
 
-            {/* Serviço 7 - Averbação de Construção */}
             <AccordionItem value="item-7" className="bg-white rounded-lg px-6">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -239,13 +231,12 @@ const Index = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 space-y-4 pt-4">
-                <p><strong>O que é:</strong> Averbação é o registro oficial da edificação construída na matrícula do imóvel, incorporando a construção ao patrimônio formal. Requer projeto as-built elaborado por engenheiro civil, CND de obra da Receita Federal e memorial descritivo técnico com responsabilidade técnica.</p>
-                <p><strong>Como funciona:</strong> Elaboramos projeto arquitetônico as-built (como efetivamente construído), preparamos documentação técnica completa exigida pelo cartório incluindo ART de projeto, obtemos CND de obra junto à Receita Federal, e conduzimos processo de averbação até atualização da matrícula com área construída registrada.</p>
-                <p><strong>Por que contratar:</strong> Engenheira civil assume responsabilidade técnica perante cartório e órgãos fiscalizadores, regulariza construção para transações imobiliárias, comprova patrimônio edificado em financiamentos, evita multas por construção irregular e valoriza o imóvel através de documentação técnica adequada.</p>
+                <p><strong>O que é:</strong> Averbação é o registro oficial da edificação construída na matrícula do imóvel. Requer projeto as-built elaborado por engenheiro civil, CND de obra da Receita Federal e memorial descritivo técnico com responsabilidade técnica.</p>
+                <p><strong>Como funciona:</strong> Elaboramos projeto arquitetônico as-built, preparamos documentação técnica completa incluindo ART de projeto, obtemos CND de obra junto à Receita Federal, e conduzimos processo de averbação até atualização da matrícula.</p>
+                <p><strong>Por que contratar:</strong> Engenheira civil assume responsabilidade técnica perante cartório, regulariza construção para transações imobiliárias e evita multas por construção irregular.</p>
               </AccordionContent>
             </AccordionItem>
 
-            {/* Serviço 8 - Usucapião */}
             <AccordionItem value="item-8" className="bg-white rounded-lg px-6">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -257,13 +248,12 @@ const Index = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 space-y-4 pt-4">
-                <p><strong>O que é:</strong> No processo de usucapião, o engenheiro civil é responsável pela elaboração do levantamento topográfico georeferenciado, memorial descritivo técnico e planta do imóvel conforme exigências da Lei 13.465/17 e resoluções do CNJ. Nossa parceria com escritório jurídico oferece solução técnico-jurídica completa.</p>
-                <p><strong>Como funciona:</strong> Realizamos levantamento topográfico planialtimétrico cadastral com georreferenciamento, elaboramos memorial descritivo técnico detalhado com coordenadas geográficas e confrontações, emitimos ART de levantamento topográfico, enquanto advogados parceiros conduzem a parte processual. Atendemos todas as modalidades de usucapião.</p>
-                <p><strong>Por que contratar:</strong> Documentação técnica elaborada por engenheira civil atende rigorosamente exigências legais e cartoriais, evita indeferimento por questões técnicas, agiliza tramitação do processo, e garante precisão nas informações cadastrais necessárias para obtenção do título de propriedade.</p>
+                <p><strong>O que é:</strong> No processo de usucapião, o engenheiro civil é responsável pela elaboração do levantamento topográfico georeferenciado, memorial descritivo técnico e planta do imóvel. Nossa parceria com escritório jurídico oferece solução técnico-jurídica completa.</p>
+                <p><strong>Como funciona:</strong> Realizamos levantamento topográfico planialtimétrico cadastral com georreferenciamento, elaboramos memorial descritivo técnico detalhado, emitimos ART de levantamento topográfico, enquanto advogados parceiros conduzem a parte processual.</p>
+                <p><strong>Por que contratar:</strong> Documentação técnica elaborada por engenheira civil atende rigorosamente exigências legais e cartoriais, evita indeferimento por questões técnicas e agiliza tramitação do processo.</p>
               </AccordionContent>
             </AccordionItem>
 
-            {/* Serviço 9 - Incorporação */}
             <AccordionItem value="item-9" className="bg-white rounded-lg px-6">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-4">
@@ -275,35 +265,33 @@ const Index = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 space-y-4 pt-4">
-                <p><strong>O que é:</strong> Incorporação imobiliária (Lei 4.591/64) é o regime jurídico para construção e comercialização de unidades autônomas. Instituição de condomínio divide legalmente edificação em unidades com matrículas próprias. Ambos exigem projetos técnicos elaborados por engenheiro civil com especificações detalhadas e responsabilidade técnica.</p>
-                <p><strong>Como funciona:</strong> Elaboramos memorial de incorporação com especificações técnicas completas do empreendimento, desenvolvemos projetos arquitetônicos e complementares, calculamos frações ideais de terreno conforme NBR 12.721, preparamos plantas e documentação técnica com ART, e conduzimos registro no cartório de imóveis e prefeitura com nossa responsabilidade técnica.</p>
-                <p><strong>Por que contratar:</strong> Engenheira civil garante conformidade técnica com legislação de incorporações, elabora documentação que atende exigências da Receita Federal e Caixa Econômica, viabiliza financiamentos e vendas de unidades, assegura segurança jurídica para compradores e investidores, e profissionaliza empreendimento desde sua concepção técnica.</p>
+                <p><strong>O que é:</strong> Incorporação imobiliária é o regime jurídico para construção e comercialização de unidades autônomas. Instituição de condomínio divide legalmente edificação em unidades com matrículas próprias. Ambos exigem projetos técnicos elaborados por engenheiro civil.</p>
+                <p><strong>Como funciona:</strong> Elaboramos memorial de incorporação com especificações técnicas completas, desenvolvemos projetos arquitetônicos e complementares, calculamos frações ideais de terreno, preparamos plantas e documentação técnica com ART, e conduzimos registro no cartório e prefeitura.</p>
+                <p><strong>Por que contratar:</strong> Engenheira civil garante conformidade técnica com legislação de incorporações, elabora documentação que atende exigências da Receita Federal e Caixa Econômica, viabiliza financiamentos e vendas de unidades.</p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
       </section>
 
-      {/* Sobre */}
       <section id="sobre" className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center mb-12">Engenharia Civil Aplicada com Responsabilidade</h2>
           <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
-            <p>A 4V Vinha é comandada por engenheira civil formada e habilitada, com registro ativo no CREA (Conselho Regional de Engenharia e Agronomia). Nossa atuação se fundamenta na aplicação rigorosa de conhecimentos técnicos de engenharia civil em projetos estruturais, regularização imobiliária e documentação técnica especializada.</p>
-            <p>A formação em Engenharia Civil nos capacita tecnicamente para compreender todas as variáveis envolvidas em um projeto: desde análise de cargas e dimensionamento estrutural até interpretação de legislações urbanísticas e normas técnicas brasileiras. Essa base sólida de conhecimento diferencia nosso trabalho e garante soluções tecnicamente corretas e economicamente viáveis.</p>
-            <p>Nosso diferencial está na integração de serviços que normalmente exigiriam múltiplos profissionais. Como engenheira civil, assumo responsabilidade técnica completa sobre projetos estruturais, laudos de vistoria, levantamentos topográficos e toda documentação necessária para aprovações em prefeituras e registros em cartórios. Cada ART (Anotação de Responsabilidade Técnica) emitida representa nosso compromisso legal e ético com a qualidade do trabalho entregue.</p>
-            <p>Atendemos desde proprietários residenciais que precisam regularizar uma construção até construtoras e incorporadoras que necessitam de projetos estruturais completos para empreendimentos. Em todos os casos, aplicamos os mesmos princípios: rigor técnico conforme normas ABNT, atenção aos prazos estabelecidos, comunicação transparente sobre cada etapa do processo, e compromisso genuíno com o resultado final que o cliente precisa alcançar.</p>
+            <p>A 4V Vinha é comandada por engenheira civil formada e habilitada, com registro ativo no CREA. Nossa atuação se fundamenta na aplicação rigorosa de conhecimentos técnicos de engenharia civil em projetos estruturais, regularização imobiliária e documentação técnica especializada.</p>
+            <p>A formação em Engenharia Civil nos capacita tecnicamente para compreender todas as variáveis envolvidas em um projeto: desde análise de cargas e dimensionamento estrutural até interpretação de legislações urbanísticas e normas técnicas brasileiras.</p>
+            <p>Nosso diferencial está na integração de serviços que normalmente exigiriam múltiplos profissionais. Como engenheira civil, assumo responsabilidade técnica completa sobre projetos estruturais, laudos de vistoria, levantamentos topográficos e toda documentação necessária para aprovações.</p>
+            <p>Atendemos desde proprietários residenciais que precisam regularizar uma construção até construtoras e incorporadoras que necessitam de projetos estruturais completos para empreendimentos. Em todos os casos, aplicamos os mesmos princípios: rigor técnico conforme normas ABNT, atenção aos prazos estabelecidos, comunicação transparente sobre cada etapa do processo.</p>
           </div>
           
           <div className="mt-12 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-600">
             <h3 className="text-xl font-bold mb-3 text-blue-900">Responsabilidade Técnica</h3>
             <p className="text-gray-700 mb-3">Todos os serviços são executados com emissão de ART (Anotação de Responsabilidade Técnica) junto ao CREA, conforme legislação vigente. Isso significa que assumimos responsabilidade legal e técnica perante órgãos fiscalizadores, cartórios, prefeituras e demais entidades.</p>
-            <p className="text-gray-700">A formação em Engenharia Civil não é apenas um título acadêmico, mas representa anos de estudo de disciplinas como resistência dos materiais, mecânica dos solos, topografia, estruturas de concreto e aço, hidráulica, e tantas outras que fundamentam tecnicamente cada decisão tomada em um projeto.</p>
+            <p className="text-gray-700">A formação em Engenharia Civil não é apenas um título acadêmico, mas representa anos de estudo de disciplinas que fundamentam tecnicamente cada decisão tomada em um projeto.</p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-16 px-4 bg-blue-600 text-white">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-4">Precisa de uma Engenheira Civil para seu Projeto?</h2>
@@ -317,12 +305,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contato */}
       <section id="contato" className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-12">Vamos Conversar Sobre Seu Projeto</h2>
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Formulário */}
             <Card>
               <CardHeader>
                 <CardTitle>Solicite uma Consulta Técnica</CardTitle>
@@ -336,6 +322,26 @@ const Index = () => {
                       id="nome" 
                       required 
                       value={formData.nome}
+                      onChange={(e) => setFormData({...formData, nome: e.target.value})}
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="telefone">Telefone (WhatsApp) *</Label>
+                    <Input 
+                      id="telefone" 
+                      type="tel" 
+                      required 
+                      value={formData.telefone}
+                      onChange={(e) => setFormData({...formData, telefone: e.target.value})}
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="email">E-mail *</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      required 
+                      value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
                     />
                   </div>
@@ -365,7 +371,7 @@ const Index = () => {
                       id="mensagem" 
                       required 
                       rows={4}
-                      placeholder="Ex: Preciso de projeto estrutural para casa de 120m², terreno com desnível..."
+                      placeholder="Ex: Preciso de projeto estrutural para casa de 120m²..."
                       value={formData.mensagem}
                       onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
                     />
@@ -375,7 +381,6 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Informações */}
             <div className="space-y-8">
               <Card>
                 <CardHeader>
@@ -477,7 +482,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
@@ -515,7 +519,6 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* WhatsApp Flutuante */}
       <a
         href={whatsappLink}
         target="_blank"
@@ -532,24 +535,4 @@ const Index = () => {
   );
 };
 
-export default Index;) => setFormData({...formData, nome: e.target.value})}
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="telefone">Telefone (WhatsApp) *</Label>
-                    <Input 
-                      id="telefone" 
-                      type="tel" 
-                      required 
-                      value={formData.telefone}
-                      onChange={(e) => setFormData({...formData, telefone: e.target.value})}
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">E-mail *</Label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      required 
-                      value={formData.email}
-                      onChange={(e
+export default Index;
